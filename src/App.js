@@ -132,11 +132,11 @@ function App() {
 const navigate = useNavigate();
 const location = useLocation();
 
-if (location.pathname != "/react-ecommerce-store/" && location.pathname != "/react-ecommerce-store/browse" && selectedGame === false) {
+if (location.pathname !== "/chain-rivals/" && location.pathname !== "/chain-rivals/browse" && selectedGame === false) {
   let surname = location.pathname.substring(29);
   console.log("test");
   let currentGame = games.find(game => game.surname === surname);
-  if (currentGame != undefined) {
+  if (currentGame !== undefined) {
     setSelectedGame(currentGame);
   } else {
     setSelectedGame(templateGame);
@@ -148,7 +148,7 @@ async function handleBrowse() {
   setTextExtended(false);
   setCartDisplayed(false);
   setHoverState([...hoverState, hoverState[21].hovered = false]);
-  navigate('/react-ecommerce-store/browse');
+  navigate('/chain-rivals/browse');
 }
 
 const handleHome = () => {
@@ -156,7 +156,7 @@ const handleHome = () => {
   setTextExtended(false);
   setCartDisplayed(false);
   setHoverState([...hoverState, hoverState[21].hovered = false]);
-  navigate('/react-ecommerce-store/');
+  navigate('/chain-rivals/');
 }
 
 const handleSearch = (e) => {
@@ -169,8 +169,8 @@ const handleSearchSubmit = (e) => {
   e.preventDefault();
   setSearching(true);
 
-  if (location.pathname != "/react-ecommerce-store/browse") {
-    navigate('/react-ecommerce-store/browse');
+  if (location.pathname !== "/chain-rivals/browse") {
+    navigate('/chain-rivals/browse');
   }
 }
 
@@ -181,15 +181,15 @@ const handleSelect = (e) => {
 const handleSelectGame = (e) => {
   if (e.target.tagName === "BUTTON") {
     return
-  } else if (e.target.classList[0] != "AddToCart_addToCart__zbJPe") {
+  } else if (e.target.classList[0] !== "AddToCart_addToCart__zbJPe") {
         setSelectedGame(games[e.target.parentNode.id]);
-        navigate(`/react-ecommerce-store/games/${games[e.target.parentNode.id].surname}`);
+        navigate(`/chain-rivals/games/${games[e.target.parentNode.id].surname}`);
   }
 }
 
 const handleLike = (e) => {
   let handledLike = allGames.map((game, i) => {
-    if (e.target.id == i) {
+    if (e.target.id === i) {
       game.isLiked = !game.isLiked
       return game
     } else {
@@ -209,7 +209,7 @@ const clearFilter = () => {
 const openGamePage = (e) => {
   setCartDisplayed(false);
   let selectedGameSurname = e.target.id;
-  navigate(`/react-ecommerce-store/games/${selectedGameSurname}`);
+  navigate(`/chain-rivals/games/${selectedGameSurname}`);
 }
 
 const handleHover = (e) => {
@@ -218,7 +218,7 @@ const handleHover = (e) => {
   }
 
   let newHoverState = hoverState.map((element, i) => {
-    if (e.target.id == i) {
+    if (e.target.id === i) {
       element.hovered = !element.hovered;
       return element
     } else {
@@ -231,7 +231,7 @@ const handleHover = (e) => {
 
 const handleHoverGame = (e) => {
   let handledHoveredGame = allGames.map((game, i) => {
-    if (e.target.id == i) {
+    if (e.target.id === i) {
       game.isHovered = !game.isHovered
       return game
     } else {
@@ -244,8 +244,8 @@ const handleHoverGame = (e) => {
 
 const handleAddToCart = (e) => {
   let handledAddedGame = allGames.map((game, i) => {
-    if (location.pathname === "/react-ecommerce-store/browse") {
-      if (e.target.id == i) {
+    if (location.pathname === "/chain-rivals/browse") {
+      if (e.target.id === i) {
         game.inCart = true
         let newCart = cart;
         newCart.push(game);
@@ -256,7 +256,7 @@ const handleAddToCart = (e) => {
         return game;
       }
     } else {
-        if (selectedGame.id == i) {
+        if (selectedGame.id === i) {
           game.inCart = true
           let newCart = cart;
           newCart.push(game);
@@ -289,9 +289,9 @@ const clearCart = () => {
 }
 
 const handleRemoveFromCart = (e) => {
-  let removedIndex = cart.findIndex(game => game.id == e.target.id);
+  let removedIndex = cart.findIndex(game => game.id === e.target.id);
   let newAllGames = allGames.map((game, i) => {
-    if (game.id == e.target.id) {
+    if (game.id === e.target.id) {
       game.inCart = false;
       game.isHovered = false;
       return game;
@@ -311,16 +311,16 @@ const handleRemoveFromCart = (e) => {
 useEffect(() => {
   setOverlap(false);
 
-  if (location.pathname === "/react-ecommerce-store/") {
+  if (location.pathname === "/chain-rivals/") {
     setBrowsing(false);
   } else {
     setBrowsing(true);
   }
 
-  if (location.pathname != "/react-ecommerce-store/browse") {
+  if (location.pathname !== "/chain-rivals/browse") {
     document.body.style.overflow = "hidden";
 
-  } else if (location.pathname === "/react-ecommerce-store/browse") {
+  } else if (location.pathname === "/chain-rivals/browse") {
     document.body.style.overflow = "scroll";
   }
 }, [location.pathname])
@@ -348,7 +348,7 @@ useEffect(() => {
   return (
       <AnimatePresence exitBeforeEnter>
           <Routes key={location.pathname} location={location}>
-            <Route path="/react-ecommerce-store/" element={<Home 
+            <Route path="/chain-rivals/" element={<Home 
                                         handleHover={handleHover} 
                                         hoverState={hoverState} 
                                         shownGames={shownGames} 
@@ -368,7 +368,7 @@ useEffect(() => {
                                         setOverlap={setOverlap}
                                         openGamePage={openGamePage}
                                       />} />
-            <Route path="/react-ecommerce-store/browse" element={<Browse 
+            <Route path="/chain-rivals/browse" element={<Browse 
                                               cart={cart}
                                               cartAmount={cartAmount}
                                               handleHover={handleHover} 
@@ -401,7 +401,7 @@ useEffect(() => {
                                               setHoverState={setHoverState}
                                               openGamePage={openGamePage}
                                           />} />
-            <Route path="/react-ecommerce-store/games/:gameId" element={<GamePage
+            <Route path="/chain-rivals/games/:gameId" element={<GamePage
                                                cart={cart}
                                                cartAmount={cartAmount}
                                                handleHover={handleHover}

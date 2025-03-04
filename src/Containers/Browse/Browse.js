@@ -52,7 +52,7 @@ const Browse = props => {
     const [grid, setGrid] = useState(true);
 
     const handleLayoutSwitch = (e) => {
-      if (e.target.id == "grid") {
+      if (e.target.id === "grid") {
         setGrid(true);
       } else {
         setGrid(false);
@@ -60,10 +60,10 @@ const Browse = props => {
     }
 
     useEffect(() => {
-      if (currentFilter == "none") {
+      if (currentFilter === "none") {
         setShownGames(allGames);
 
-      } else if (currentFilter != "Ratings" && currentFilter != "Reviews" && currentFilter != "Wishlist") {
+      } else if (currentFilter !== "Ratings" && currentFilter !== "Reviews" && currentFilter !== "Wishlist") {
           let filteredShownGames = allGames.filter(game => game.genre === currentFilter);
           setShownGames(filteredShownGames);
 
@@ -82,7 +82,7 @@ const Browse = props => {
           setShownGames(filteredShownGames);
       }
 
-      if (currentFilter != "Reviews") {
+      if (currentFilter !== "Reviews") {
           setReviewDisplay(false);
       }
     }, [currentFilter])
