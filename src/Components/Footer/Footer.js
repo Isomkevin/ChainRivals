@@ -12,7 +12,7 @@ const Footer = props => {
         <div className={styles.footer}>
             <div className={styles.footerTop}>
                 <Logo className={styles.logo} />
-                <h2>Game Store</h2>
+                <h2>Chain Rivals</h2>
             </div>
             <div className={styles.sections}>
               <div className={`${styles.section} ${styles.section1}`}>

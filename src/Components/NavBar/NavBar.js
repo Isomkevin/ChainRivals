@@ -54,7 +54,7 @@ const NavBar = props => {
               onClick={handleHome}
             >
                 <Logo className={styles.svg} style={{ fill: "#fff" }}/>
-                <h3>Game Store</h3>
+                <h3>Chain Rivals</h3>
             </div>
     
             <div className={styles.pathdiv} id="1"
