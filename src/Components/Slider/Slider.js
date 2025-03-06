@@ -27,7 +27,7 @@ const Slider = props => {
   const location = useLocation();
 
   useEffect(() => {
-    const selectedGameIndex = allGames.findIndex(game => "/chain-rivals/games/" + game.surname === location.pathname);
+    const selectedGameIndex = allGames.findIndex(game => "/chain-rivals/challenges/" + game.surname === location.pathname);
     setSelectedGame(allGames[selectedGameIndex]);
   }, []);
 

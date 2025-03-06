@@ -129,7 +129,7 @@ const GamePage = props => {
                       aria-label='Back'
                     >
                         <Arrow style={{ fill: hoverState[19].hovered ? "#92f" : "#cccccc" }} className={styles.arrow} />
-                        Store
+                        Home
                     </button>
 
                     <h1>{selectedGame ? selectedGame.name : templateGame.name}</h1>
@@ -159,7 +159,7 @@ const GamePage = props => {
                       >
                         <AnimatedText>
                              <div className={textExtended ? styles.open : styles.closed}>
-                                 <a href={selectedGame ? selectedGame.link : templateGame.link} target="_blank">{selectedGame ? selectedGame.name : "No"} Website</a>
+                                 <a href={selectedGame ? selectedGame.link : templateGame.link} target="_blank" rel="noreferrer">{selectedGame ? selectedGame.name : "No"} Website</a>
                                  <h4>Released: {selectedGame ? selectedGame.release : templateGame.release}</h4>
                                  <h4>Platforms: {selectedGame ? selectedGame.platforms : templateGame.platforms}</h4>
                                  <h4>Main Genre: {selectedGame ? selectedGame.genre : templateGame.genre}</h4>

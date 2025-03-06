@@ -19,13 +19,11 @@ const Footer = props => {
                 <h3 className={styles.first}>Company</h3>
                 <h3>About</h3>
                 <h3>Press Center</h3>
-                <h3>Careers</h3>
+                {/* <h3>Careers</h3> */}
               </div>
               <div className={`${styles.section} ${styles.section2}`}>
-                <h3 className={styles.first}>Consoles</h3>
-                <h3>Playstation 5</h3>
-                <h3>Xbox One</h3>
-                <h3>Switch</h3>
+                <h3 className={styles.first}>Our Partners</h3>
+                <h3>LESOM DYNAMICS</h3>
               </div>
               <div className={`${styles.section} ${styles.section3}`}>
                 <h3 className={styles.first}>Resources</h3>
@@ -41,8 +39,8 @@ const Footer = props => {
     
             <div className={styles.footerInfo}>
               <div className={styles.infoLeft}>
-                <p>This page was built by Gianluca Jahn with React.</p>
-                <p>Portions of this page are inspired by <span>RAWG, RAWG.io</span>. This page was built solely for educational purposes.</p>
+                <p>This page was built by LESOM DYNAMICS.</p>
+                <p>Portions of this page are inspired by <span>RAWG, RAWG.io</span>.</p>
               </div>
               <div className={styles.infoRight}>
                 <img className={styles.google} src={require("../../Resources/image/googleplaybadge.png")} alt="Google Play Badge" />

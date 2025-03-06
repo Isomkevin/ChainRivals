@@ -3,7 +3,7 @@ import styles from './App.module.css';
 import { BrowserRouter, Routes, Route, useNavigate, useLocation } from "react-router-dom";
 import React, { useEffect, useState } from 'react';
 import Browse from './Containers/Browse/Browse';
-import GamePage from './Containers/GamePage/GamePage';
+import ChallengePage from './Containers/GamePage/GamePage';
 import NotFound from './Containers/NotFound/NotFound';
 import Home from './Containers/Home/Home';
 import { AnimatePresence } from "framer-motion";
@@ -183,7 +183,7 @@ const handleSelectGame = (e) => {
     return
   } else if (e.target.classList[0] !== "AddToCart_addToCart__zbJPe") {
         setSelectedGame(games[e.target.parentNode.id]);
-        navigate(`/chain-rivals/games/${games[e.target.parentNode.id].surname}`);
+        navigate(`/chain-rivals/challenges/${games[e.target.parentNode.id].surname}`);
   }
 }
 
@@ -209,7 +209,7 @@ const clearFilter = () => {
 const openGamePage = (e) => {
   setCartDisplayed(false);
   let selectedGameSurname = e.target.id;
-  navigate(`/chain-rivals/games/${selectedGameSurname}`);
+  navigate(`/chain-rivals/challenges/${selectedGameSurname}`);
 }
 
 const handleHover = (e) => {
@@ -401,7 +401,7 @@ useEffect(() => {
                                               setHoverState={setHoverState}
                                               openGamePage={openGamePage}
                                           />} />
-            <Route path="/chain-rivals/games/:gameId" element={<GamePage
+            <Route path="/chain-rivals/challenges/:gameId" element={<ChallengePage
                                                cart={cart}
                                                cartAmount={cartAmount}
                                                handleHover={handleHover}

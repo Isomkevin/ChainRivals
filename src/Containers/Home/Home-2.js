@@ -5,7 +5,7 @@ import { ReactComponent as GitHubLogo } from "../../Resources/image/githublogo.s
 import { ReactComponent as Enter } from "../../Resources/image/enter.svg";
 import { ReactComponent as Dice } from "../../Resources/image/dice.svg";
 import { ReactComponent as LinkedIn } from "../../Resources/image/linkedin.svg";
-import { ReactComponent as Game } from "../../Resources/image/game.svg";
+import { ReactComponent as Game } from "../../Resources/image/challenge.svg";
 import { ReactComponent as NotFound } from "../../Resources/image/notfound.svg";
 import { ReactComponent as NotFoundQuery } from "../../Resources/image/notfoundquery.svg";
 import { ReactComponent as Git } from "../../Resources/image/git.svg";
@@ -15,11 +15,11 @@ import { motion, AnimatePresence, m } from "framer-motion";
 import { Navigate, useLocation, useNavigate } from 'react-router-dom';
 import Cart from '../../Components/Cart/Cart';
 import AnimatedScroll from '../AnimatedPage/AnimatedScroll';
-import games from '../../utils/challenges';
+import challenges from '../../utils/challenges';
 
 const Home = props => {
   const {
-    shownGames,
+    shownChallenges,
     cartAmount,
     cart,
     cartDisplayed,
@@ -31,7 +31,7 @@ const Home = props => {
     setHoverState,
     overlap,
     setOverlap,
-    openGamePage
+    openChallengePage
   } = props;
 
   const [browsing, setBrowsing] = useState(false);
@@ -76,7 +76,7 @@ const Home = props => {
   
   const handlePlayDice = () => {
     let randomIndex = Math.floor(Math.random() * 32);
-    let randomSurname = games[randomIndex].surname;
+    let randomSurname = challenges[randomIndex].surname;
     setOverlap(true);
     setTimeout(() => {
       setBrowsing(true);
@@ -118,7 +118,7 @@ const Home = props => {
               hoverState={hoverState}
               clearCart={clearCart}
               handleRemoveFromCart={handleRemoveFromCart}
-              openGamePage={openGamePage}
+              openChallengePage={openChallengePage}
       /> : null}
         <div className={styles.home}>
 
@@ -141,7 +141,7 @@ const Home = props => {
                     <div className={styles.left}>
                         <div className={styles.splash}>
                           <h1>Chain Rivals</h1>
-                          <p className={styles.intro}>The best destination to buy new games to competitive prices. 24 hour support, "best price" guarantee and a flawless UX. Wish for more? Tell us <span className={styles.here}>below</span> — or check out our <span className={styles.careers}>careers.</span></p>
+                          <p className={styles.intro}>The best destination to buy new challenges to competitive prices. 24 hour support, "best price" guarantee and a flawless UX. Wish for more? Tell us <span className={styles.here}>below</span> — or check out our <span className={styles.careers}>careers.</span></p>
                         </div>
     
                         <div className={styles.buttons}>
@@ -149,7 +149,7 @@ const Home = props => {
                                 <Enter className={styles.ctaSVG} />
                                 Browse
                               </button>
-                              <button className={styles.cta} onClick={handlePlayDice} aria-label="Open random Challenge page">
+                              <button className={styles.cta} onClick={handlePlayDice} aria-label="Open random challenges page">
                                 <Dice className={styles.ctaSVG} />
                                 Play Dice
                               </button>
@@ -167,7 +167,7 @@ const Home = props => {
                     <div className={styles.right}>
                         <div className={styles.buttonsRight}>
                             <h2>Quick Navigation</h2>
-                            <button className={styles.cta} onClick={handleNavGamePage} aria-label="Open a game page">
+                            <button className={styles.cta} onClick={handleNavGamePage} aria-label="Open a challenges page">
                               <Game className={styles.ctaSVG} />
                               Game Page
                             </button>
@@ -184,7 +184,7 @@ const Home = props => {
                               Commit Log
                             </button></a>
                             <a href="https://github.com/Isomkevin/ChainRivals/blob/main/README.md#performance" target="_blank" rel="noreferrer"><button className={`${styles.cta} ${styles.lastChild}`} aria-label="Open performance test results">
-                              <Performance className={`${styles.ctaSVG}`} />
+                              <Performance className={`${styles.ctaSVG}`} /> 
                               Performance
                             </button></a>
                             <a href="https://github.com/Isomkevin/ChainRivals/blob/main/README.md#technologies-used" target="_blank" rel="noreferrer"><button className={`${styles.cta} ${styles.lastChild}`} aria-label="View technologies used"> 

@@ -103,7 +103,7 @@ const NavBar = props => {
                     <Browse 
                       className={styles.svg} 
                       style={{ fill: "#fff" }}/>
-                    <h3 onClick={handleBrowse}>Browse Store</h3>
+                    <h3 onClick={handleBrowse}>Browse Chain Rivals</h3>
                   </div>
                 }
             </div>
@@ -132,7 +132,7 @@ const NavBar = props => {
                   className={styles.svg2} 
                   style={{ fill: cartAmount ? "#90ee90" : "transparent", stroke: cartAmount ? "" : "#fff", strokeWidth: "34px" }}
                 />
-                <h3 onClick={handleOpenCart}>Cart: {cartAmount}</h3>
+                <h3 onClick={handleOpenCart}>Challenges: {cartAmount}</h3>
             </div>
         </div>
       </motion.div>
