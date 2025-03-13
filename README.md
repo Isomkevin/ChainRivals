@@ -1,56 +1,74 @@
-<h1 align="center">🛍️ React E-Commerce Store</h1>
+# 🚀 ChainRivals: Smart Contract Wars Leaderboard Platform
 
-![](/src/Resources/image/preview1.png)
-<p align="center">
-  Chain Rivals built with React
-</p>
+## 🔥 Overview
+The **ChainRivals platform** is a gamified ecosystem designed to advance **smart contract security, optimization, and developer upskilling**. It provides a dynamic space where **Web3 developers, security researchers, and blockchain startups** can compete, audit, and optimize smart contracts through **leaderboards, challenges, and tokenized incentives**.
 
-## Short Description
-An e-commerce store, imitating a Chain Rivals, built with React. Includes dedicated game pages, a search functionality, genre and rating filters, a like feature and a wishlist. Responsive to the bone and tested with Jest. You can find a list of [features](#features), [performance tests](#performance) and [technologies used](#technologies-used) below.
+## 🎯 Features
+- **Leaderboard-Driven Competitions** – Rank top developers based on contract security, optimization, and performance.
+- **Gamified Bounty Challenges** – Developers compete in security audits and gas optimization challenges.
+- **Reputation NFTs & Rewards** – Earn reputation-based NFTs and tokenized incentives.
+- **AI-Assisted Contract Analysis** – Get real-time feedback on contract security and efficiency.
+- **Decentralized Governance** – Community-driven curation of challenges and rewards.
+- **Smart Contract Security Audits** – Verified security challenges inspired by real-world vulnerabilities.
 
-## 🔴 Demo
-🧪 [Live Demo](https://chain-rivals.vercel.app/chain-rivals) available. Click "Live Demo" to open it.
+## 🔗 Tech Stack
+- **Frontend:** React.js, Next.js, TailwindCSS
+- **Backend:** Node.js, Express.js, GraphQL
+- **Blockchain:** Solidity, Hardhat, Foundry, Ethers.js
+- **Database:** PostgreSQL, Firebase (for real-time leaderboards)
+- **Smart Contract Deployment:** Ethereum, Polygon, Arbitrum, Optimism
+- **Authentication:** WalletConnect, SIWE (Sign-In with Ethereum)
 
-## Showcase
-You can see images and a GIF of the project in user interaction below. The user starts on the landing page, navigates through the browse section, selects a game, adds it to their cart and opens the cart. The GIF does not show all features of the shop, it only shows the most elementary user interactions. <br /> <br />
+## 🚀 Getting Started
 
-![](/src/Resources/image/preview0.png)
-![](/src/Resources/image/preview1.png)
-![](/src/Resources/image/preview2.png)
-![](/src/Resources/image/preview3.png)
-![](/src/Resources/image/preview4.png)
-![](/src/Resources/image/showcase.gif)
+### Prerequisites
+Ensure you have the following installed:
+- Node.js (>=16.x)
+- Yarn or NPM
+- Hardhat / Foundry (for smart contract development)
+- A Web3-enabled wallet (MetaMask, WalletConnect, etc.)
 
-## Performance
-I let [Google Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=de) run over my application to check for it's **performance, accessibility, use of best practices and SEO optimization**. You can view the results right below this paragraph.
+### Setup
+Clone the repository:
+```sh
+ git clone https://github.com/YOUR_GITHUB_USERNAME/smart-contract-wars.git
+ cd smart-contract-wars
+```
 
-![Google Lighthouse Performance Results](https://i.ibb.co/qkXkY5W/report1.png)
+Install dependencies:
+```sh
+ npm install  # or yarn install
+```
 
-## Motivation
-My motivations in building this project were showcasing what I learned so far and to have somewhat of a "sandbox" to experiment and build within. I was able to learn new libraries and I had to be creative with ways to improve my application's performance. I also believed that building a project with a much bigger codebase than my preceding ones and learning how to organize such a codebase could set me off better for work in a business environment - and it did.
+### Running the Project
+#### 1️⃣ Start the Development Server
+```sh
+ npm run dev  # or yarn dev
+```
 
-## Features
-- Expressive, responsive and clear UI/UX
-- Extensive unit and integration tests to ensure intentional behaviour
-- Search any game you want
-- Filters to sort after genres and ratings
-- Like & Wishlist feature to track your personal wishlist
-- Smooth Animations with Framer Motion
-- Quick Navigation to view all parts of the project without having to click through it
+#### 2️⃣ Compile & Deploy Smart Contracts (Hardhat)
+```sh
+ npx hardhat compile
+ npx hardhat test
+```
 
-## Technologies Used
-- React
-- React Router Dom
-- Framer Motion
-- Jest
-- CSS
-- Git
-- CDN 
+#### 3️⃣ Deploy Contracts to a Testnet (e.g., Sepolia, Mumbai)
+```sh
+ npx hardhat run scripts/deploy.js --network sepolia
+```
 
-## What I learned:
-- Using motion libraries (e.g. Framer Motion) to achieve much smoother user experiences while maintaining clean code
-- Working with a CDN (Cloud Delivery Network) to improve performance by accelerating bundle delivery
-- organizing and connecting a project with React Router Dom
+## 🛠 Contributing
+We welcome contributions! Follow these steps:
+1. Fork the repository
+2. Create a new branch (`git checkout -b feature-xyz`)
+3. Commit your changes (`git commit -m "Added feature XYZ"`)
+4. Push to your fork (`git push origin feature-xyz`)
+5. Create a pull request 🚀
 
-## Credits
-All rights to all pictures, products and names on this website belong to the respective publishers of the games displayed. I only used them to build an environment for myself to learn coding in React with. This page is not being used commercially. If you are an owner of the copyrighted material, please let me know if you have any issues with this page and I'll take it down immediately.
+## 📜 License
+This project is licensed under the **MIT License**.
+
+## 🌐 Connect With Us
+- **Twitter:** [@YourHandle](https://twitter.com/YourHandle)
+- **Discord:** [Join Community](https://discord.gg/your-link)
+- **Website:** [SmartContractWars.com](https://smartcontractwars.com)
