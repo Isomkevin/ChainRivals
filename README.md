@@ -12,7 +12,7 @@ The **ChainRivals platform** is a gamified ecosystem designed to advance **smart
 - **Smart Contract Security Audits** – Verified security challenges inspired by real-world vulnerabilities.
 
 ## 🔗 Tech Stack
-- **Frontend:** React.js, Next.js, TailwindCSS
+- **Frontend:** React.js, TailwindCSS
 - **Backend:** Node.js, Express.js, GraphQL
 - **Blockchain:** Solidity, Hardhat, Foundry, Ethers.js
 - **Database:** PostgreSQL, Firebase (for real-time leaderboards)
