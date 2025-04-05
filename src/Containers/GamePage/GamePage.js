@@ -201,7 +201,7 @@ const GamePage = props => {
                         onClick={handleAddToCart} 
                         aria-label="Add"
                       >
-                        Add to cart
+                        Add to My Challenges
                         <Add 
                           className={styles.add} 
                           style={{ fill: hoverState[21].hovered ? "#92f" : "#999999" }}
