@@ -167,10 +167,10 @@ const Home = (props) => {
               <button
                 className={styles.cta}
                 onClick={handlePlayDice}
-                aria-label="Open random Challenge page"
+                aria-label="Open Random Challenge"
               >
                 <Dice className={styles.ctaSVG} />
-                Pick a Random Challenge
+                Pick a Random
               </button>
               <a
                 href="https://github.com/Isomkevin/ChainRivals"
